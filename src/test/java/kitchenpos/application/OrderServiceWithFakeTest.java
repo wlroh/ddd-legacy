@@ -12,7 +12,7 @@ import kitchenpos.fixture.MenuFixture;
 import kitchenpos.fixture.OrderFixture;
 import kitchenpos.fixture.OrderLineItemFixture;
 import kitchenpos.fixture.OrderTableFixture;
-import kitchenpos.fixture.fake.FakeRiderAgencyClient;
+import kitchenpos.fixture.fake.DummyRiderAgencyClient;
 import kitchenpos.fixture.fake.InMemoryMenuRepository;
 import kitchenpos.fixture.fake.InMemoryOrderRepository;
 import kitchenpos.fixture.fake.InMemoryOrderTableRepository;
@@ -44,7 +44,7 @@ public class OrderServiceWithFakeTest {
         orderRepository = new InMemoryOrderRepository();
         menuRepository = new InMemoryMenuRepository();
         orderTableRepository = new InMemoryOrderTableRepository();
-        riderAgencyClient = new FakeRiderAgencyClient();
+        riderAgencyClient = new DummyRiderAgencyClient();
         orderService = new OrderService(orderRepository, menuRepository, orderTableRepository, riderAgencyClient);
     }
 
